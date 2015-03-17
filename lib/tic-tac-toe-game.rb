@@ -196,7 +196,7 @@ class TicTacToe
     game_over = nil
     
     @columns.each do |column|
-      # If Computer Won
+      # If time_in_column returns 3 Computer Won
       if times_in_column(column, @computer) == 3
         put_line
         draw_game
@@ -208,7 +208,7 @@ class TicTacToe
         ask_to_play_again(false)
       end
 
-      # If User Won
+      # If times_in_column returns 3 User Won
       if times_in_column(column, @user) == 3
         put_line
         draw_game
